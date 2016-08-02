@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <view class="edu.uw.mczhou.shoot.DrawingSurfaceView"
+        android:id="@+id/drawingSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/play_again_menu"
+        android:layout_width="275dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="@android:color/white"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/play_again_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Play Again?"
+            android:textSize="26dp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score: "
+            android:textSize="20dp"
+            android:layout_below="@id/play_again_text"/>
+
+        <TextView
+            android:id="@+id/user_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/score_text"
+            android:layout_below="@id/play_again_text"/>
+
+        <TextView
+            android:id="@+id/high_score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High Score: "
+            android:textSize="20dp"
+            android:layout_below="@id/score_text"/>
+
+        <TextView
+            android:id="@+id/user_high_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20dp"
+            android:layout_below="@id/score_text"
+            android:layout_toRightOf="@id/high_score_text"/>
+
+        <Button
+            android:id="@+id/main_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Main Menu"
+            android:layout_alignParentBottom="true"
+            android:onClick="handleMainMenu"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Again"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="handlePlayAgain"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textScore"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text= "0"
+        android:textColor="#7BFA21"
+        android:textSize="30dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text= "score"
+        android:textColor="#7BFA21"
+        android:textSize="15dp"
+        android:layout_below="@+id/textScore"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/life3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/life"/>
+
+    <ImageView
+        android:id="@+id/life2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@id/life3"
+        android:src="@drawable/life"/>
+
+    <ImageView
+        android:id="@+id/life1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_toLeftOf="@id/life2"
+        android:src="@drawable/life"/>
+
+
+
+
+</RelativeLayout>
